@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reproductor de Música</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎵 El Meu Reproductor de Música</h1>
+            <p class="subtitle">Escolta la meva col·lecció de cançons</p>
+        </header>
+
+        <div class="player-container">
+            <!-- Informació de la cançó actual -->
+            <div class="current-song">
+                <div class="album-art">
+                    <div class="music-icon">🎵</div>
+                </div>
+                <div class="song-info">
+                    <h2 id="song-title">Selecciona una cançó</h2>
+                    <p id="song-artist">Artista</p>
+                </div>
+            </div>
+
+            <!-- Controls del reproductor -->
+            <div class="player-controls">
+                <audio id="audio-player" preload="metadata"></audio>
+                
+                <div class="progress-container">
+                    <span id="current-time">0:00</span>
+                    <div class="progress-bar">
+                        <div class="progress" id="progress"></div>
+                        <input type="range" id="progress-slider" min="0" max="100" value="0">
+                    </div>
+                    <span id="duration">0:00</span>
+                </div>
+
+                <div class="controls">
+                    <button id="prev-btn" class="control-btn">⏮</button>
+                    <button id="play-pause-btn" class="control-btn play-pause">▶</button>
+                    <button id="next-btn" class="control-btn">⏭</button>
+                    <div class="volume-control">
+                        <span>🔊</span>
+                        <input type="range" id="volume-slider" min="0" max="100" value="70">
+                        <span id="volume-value">70%</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Llista de cançons -->
+            <div class="playlist-container">
+                <h3>Llista de Cançons</h3>
+                <div id="playlist" class="playlist">
+                    <p style="text-align: center; color: #666; padding: 20px;">Carregant cançons...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
